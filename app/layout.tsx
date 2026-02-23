@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable} ${poppins.variable} ${anaheim.variable} font-poppins antialiased`}>
+      <body className={`${urbanist.variable} ${poppins.variable} ${anaheim.variable} font-poppins antialiased overflow-x-hidden`}>
         {children}
       </body>
     </html>

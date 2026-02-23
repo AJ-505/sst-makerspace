@@ -9,9 +9,9 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-24 px-8">
+      <section className="relative bg-black text-white py-15 px-8">
         <div className="absolute inset-0 opacity-30">
-          <div className="w-full h-full bg-gradient-to-b from-black/50 to-black"></div>
+          <div className="w-full h-full bg-linear-to-b from-black/50 to-black"></div>
         </div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-urbanist font-bold mb-6">
