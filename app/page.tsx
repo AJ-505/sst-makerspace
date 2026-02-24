@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
           <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/makerspace-workshop-with-students-gathered-on-mult.jpg"
+              src="/makerspace-workshop-with-students-gathered-on-mult.webp"
               alt="SST Makerspace workshop"
               fill
               className="object-cover"
@@ -133,7 +133,7 @@ export default function HomePage() {
               </div>
               <div className="overflow-hidden rounded-2xl border border-black/5 bg-gray-100">
                 <Image
-                  src="/sstms-2026-competitions-flyer.jpeg"
+                  src="/sstms-2026-competitions-flyer.webp"
                   alt="SST Makerspace upcoming competitions flyer"
                   width={1080}
                   height={1350}

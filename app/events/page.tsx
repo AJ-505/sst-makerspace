@@ -145,7 +145,7 @@ export default function EventsPage() {
               <div key={idx} className="relative group min-w-0">
                 <div className="mb-3 aspect-square overflow-hidden rounded-3xl bg-gray-200 sm:mb-4">
                   <Image
-                    src={`/professional-portrait-.jpg?height=400&width=400&query=professional-portrait-${idx}`}
+                    src={`/professional-portrait-.webp?height=400&width=400&query=professional-portrait-${idx}`}
                     alt={member.name}
                     width={400}
                     height={400}

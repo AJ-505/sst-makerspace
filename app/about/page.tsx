@@ -75,7 +75,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden mx-auto">
-                <Image src="/smiling-man-portrait.png" alt="Person" width={400} height={400} className="object-cover" />
+                <Image src="/smiling-man-portrait.webp" alt="Person" width={400} height={400} className="object-cover" />
               </div>
             </div>
             <div className="relative">
@@ -218,7 +218,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="w-80 h-80 rounded-full overflow-hidden mx-auto">
                   <Image
-                    src="/smiling-man-portrait.png"
+                    src="/smiling-man-portrait.webp"
                     alt="Person"
                     width={400}
                     height={400}

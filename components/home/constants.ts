@@ -81,7 +81,7 @@ export const COMPETITIONS: Competition[] = [
     description:
       "Teams design and build a wirelessly controlled MotoBot that can race with speed, agility, and steering precision while showcasing their engineering design process.",
     imageAlt: "MotoBot Competition",
-    imageSrc: "/small-robots-racing-on-track.jpg",
+    imageSrc: "/small-robots-racing-on-track.webp",
     index: "1",
     theme: "The Future of Work 2024",
     title: "MotoBot Competition",
@@ -90,7 +90,7 @@ export const COMPETITIONS: Competition[] = [
     description:
       "Teams design a wheeled GripperBot that can pick, move, and stack objects to address manual material-handling challenges through practical automation.",
     imageAlt: "GripperBot Competition",
-    imageSrc: "/industrial-robotic-arm-gripper-orange.jpg",
+    imageSrc: "/industrial-robotic-arm-gripper-orange.webp",
     index: "2",
     theme: "The Future of Work 2026",
     title: "GripperBot Competition",
