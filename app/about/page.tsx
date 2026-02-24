@@ -256,13 +256,15 @@ export default function AboutPage() {
             </div>
 
             <h4 className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-4">GripperBot Challenge</h4>
-            <p className="text-xl font-anaheim text-gray-500 italic mb-8">Theme: The Future of Work in Africa</p>
+            <p className="text-xl font-anaheim text-gray-500 italic mb-8">
+              Theme: Re-imagining the Future of Labor in the African Ecosystem
+            </p>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <h5 className="text-2xl font-urbanist font-bold text-[#D97706] mb-4">Problem Statement</h5>
               <p className="font-poppins text-gray-700 mb-8">
-                Design a wheeled GripperBot that can pick objects, transport them, and place them accurately onto a
-                stack.
+                Design and build a remote-controlled MotoBot with a gripper that can handle and move loads more safely
+                and efficiently, demonstrating practical automation for African industrial contexts.
               </p>
 
               <div className="bg-gray-50 rounded-xl p-8 grid grid-cols-5 gap-6 text-center">

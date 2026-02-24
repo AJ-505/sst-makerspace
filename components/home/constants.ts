@@ -29,6 +29,11 @@ export type Testimonial = {
   role: string
 }
 
+export type SponsorMessage = {
+  message: string
+  sponsor: string
+}
+
 export const HOME_STATS: HomeStat[] = [
   { label: "Participants", value: "30+" },
   { label: "Teams", value: "15+" },
@@ -88,39 +93,61 @@ export const COMPETITIONS: Competition[] = [
   },
   {
     description:
-      "Teams design a wheeled GripperBot that can pick, move, and stack objects to address manual material-handling challenges through practical automation.",
+      "Teams build a remote-controlled MotoBot with a gripper to automate handling tasks and demonstrate safer, more efficient labor-focused hardware solutions.",
     imageAlt: "GripperBot Competition",
     imageSrc: "/industrial-robotic-arm-gripper-orange.webp",
     index: "2",
-    theme: "The Future of Work 2026",
+    theme: "Re-imagining the Future of Labor in the African Ecosystem (2024/2025)",
     title: "GripperBot Competition",
   },
 ]
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    author: "Dr Darlington Agbor",
-    quote: "Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.",
-    role: "Faculty SST",
+    author: "Oluwatofunmi Olusodo",
+    quote:
+      "My experience was both exhilarating and nostalgic. SST Makerspace gave me the perfect opportunity to contribute to someone else’s journey of self-discovery in tech.",
+    role: "Volunteer, Economics Student (PAU)",
   },
   {
-    author: "Dr Darlington Agbor",
-    quote: "This is beautiful and fantastic. And to think that it was entirely organized by students.",
-    role: "Faculty SST",
+    author: "Semilore Ajibola",
+    quote:
+      "We were the last team to figure out our members and had no background in microcontrollers or programming, yet we pulled it off and made a statement.",
+    role: "Team Lead, Winner - GripperBot Challenge",
   },
   {
-    author: "Dr Enehimon Agbor",
-    quote: "Amazing execution. We are definitely investing our hardware resources in this in coming session.",
-    role: "Dean SST",
+    author: "Dr. Desmond Moru",
+    quote:
+      "We need a stronger industry-academia handshake that helps students translate classroom principles into solutions for real community problems.",
+    role: "Senior Lecturer, Computer Science (PAU)",
   },
   {
-    author: "Dr Darlington Agbor",
-    quote: "Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.",
-    role: "Faculty SST",
+    author: "Saviour Emmanuel Sunday",
+    quote:
+      "We are building an army of inventors, students who can hold an idea in their mind and bring it to life with their hands.",
+    role: "President, SST Makerspace",
   },
   {
-    author: "Dr Darlington Agbor",
-    quote: "Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.",
-    role: "Faculty SST",
+    author: "SST Makerspace Community",
+    quote: "Together, we are shaping the future of innovation. Your support fuels young minds and bold ideas.",
+    role: "Event 2.0 Impact Summary",
+  },
+]
+
+export const SPONSOR_MESSAGES: SponsorMessage[] = [
+  {
+    message:
+      "Sponsoring SST Makerspace gave our brand strong campus visibility through event branding, promo placements, and direct engagement with a high-energy innovation audience.",
+    sponsor: "Auptex (Curated Sponsor Feedback)",
+  },
+  {
+    message:
+      "We gained early access to practical student builders and potential talent by supporting challenge-day activities, exhibition booths, and hands-on sessions.",
+    sponsor: "TotalEnergies (Curated Sponsor Feedback)",
+  },
+  {
+    message:
+      "The partnership created meaningful market and product conversations with students solving real-world hardware problems, which aligns with our long-term innovation goals.",
+    sponsor: "Interswitch (Curated Sponsor Feedback)",
   },
 ]

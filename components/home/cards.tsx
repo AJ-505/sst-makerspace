@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import type { Competition, Feature, HomeStat, Testimonial, UpcomingChallenge } from "./constants"
+import type { Competition, Feature, HomeStat, SponsorMessage, Testimonial, UpcomingChallenge } from "./constants"
 import Image from "next/image"
 
 export function StatCard({ label, value }: HomeStat) {
@@ -65,6 +65,15 @@ export function TestimonialCard({ author, quote, role }: Testimonial) {
           <p className="text-xs font-anaheim text-white/70">{role}</p>
         </div>
       </div>
+    </div>
+  )
+}
+
+export function SponsorMessageCard({ message, sponsor }: SponsorMessage) {
+  return (
+    <div className="rounded-xl bg-white p-6 shadow-sm">
+      <p className="mb-4 text-sm leading-relaxed font-poppins text-gray-700">{message}</p>
+      <p className="text-sm font-urbanist font-bold text-[#7C3AED]">{sponsor}</p>
     </div>
   )
 }

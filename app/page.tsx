@@ -4,11 +4,19 @@ import { Footer } from "@/components/footer"
 import {
   CompetitionCard,
   FeatureCard,
+  SponsorMessageCard,
   StatCard,
   TestimonialCard,
   UpcomingChallengeCard,
 } from "@/components/home/cards"
-import { COMPETITIONS, HOME_FEATURES, HOME_STATS, TESTIMONIALS, UPCOMING_CHALLENGES } from "@/components/home/constants"
+import {
+  COMPETITIONS,
+  HOME_FEATURES,
+  HOME_STATS,
+  SPONSOR_MESSAGES,
+  TESTIMONIALS,
+  UPCOMING_CHALLENGES,
+} from "@/components/home/constants"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -222,9 +230,9 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-16 px-8 bg-[#C2410C]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-urbanist font-bold text-white mb-4 text-center">What People Are Saying</h2>
+          <h2 className="text-4xl font-urbanist font-bold text-white mb-4 text-center">Voices from SST Makerspace</h2>
           <p className="text-center font-anaheim text-white/80 mb-12">
-            Reviews from SST Motobot/pool Motobot Competition 2024
+            Stories from participants, volunteers, and faculty who have experienced the journey firsthand.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-6">
@@ -236,6 +244,20 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {TESTIMONIALS.slice(3).map((testimonial, idx) => (
               <TestimonialCard key={`${testimonial.author}-more-${idx}`} {...testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 px-4 py-16 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-4 text-center text-4xl font-urbanist font-bold text-[#D97706]">What Sponsors Gained</h2>
+          <p className="mx-auto mb-10 max-w-3xl text-center font-anaheim text-gray-600">
+            Curated sponsor outcomes from recent partnership snapshots and sponsorship-impact slides.
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {SPONSOR_MESSAGES.map((message) => (
+              <SponsorMessageCard key={message.sponsor} {...message} />
             ))}
           </div>
         </div>
