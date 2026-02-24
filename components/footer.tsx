@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react"
+import { Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -40,38 +40,26 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 border-t border-white/20 pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-md text-sm font-poppins">© 2025 SST-Makerspace, Pan-Atlantic University. All rights reserved.</p>
-          <div className="flex flex-wrap gap-3 md:gap-4">
+        <div className="flex flex-col items-center gap-6 border-t border-white/20 pt-8">
+          <p className="max-w-md text-center text-sm font-poppins">© 2025 SST-Makerspace, Pan-Atlantic University. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             <a
-              href="#"
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="#"
+              href="https://www.instagram.com/sstmakerspace?igsh=Z3ZvNjlkaW4wbmpu"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SST Makerspace Instagram"
               className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
             >
               <Instagram size={20} />
             </a>
             <a
-              href="#"
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
-            >
-              <Twitter size={20} />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/sst-makerspace-56b57a329?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SST Makerspace LinkedIn"
               className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
-            >
-              <Youtube size={20} />
             </a>
           </div>
         </div>
