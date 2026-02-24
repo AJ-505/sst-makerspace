@@ -22,9 +22,7 @@ export default function EventsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-black px-4 pt-8 pb-20 text-white sm:px-6 sm:pt-10 sm:pb-24 lg:px-8 lg:pt-14 lg:pb-32">
-        <div className="absolute inset-0 opacity-30 bg-gradient-to-b from-black/50 to-purple-900/30"></div>
-
+      <section className="hero-top-bg relative px-4 pt-8 pb-20 text-white sm:px-6 sm:pt-10 sm:pb-24 lg:px-8 lg:pt-14 lg:pb-32">
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="mb-6 inline-block rounded bg-[#D97706] px-4 py-2 font-anaheim font-bold text-white sm:mb-8 sm:px-6">
             ABOUT SST MAKERSPACE

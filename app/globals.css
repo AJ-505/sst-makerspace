@@ -126,3 +126,11 @@
   }
 }
 
+.hero-top-bg {
+  background-image:
+    linear-gradient(to bottom, rgb(8 4 28 / 0.82) 0%, rgb(34 16 72 / 0.62) 42%, rgb(94 53 177 / 0.46) 100%),
+    url("/hero-top-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

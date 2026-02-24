@@ -10,11 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-32 px-8">
-        <div className="absolute inset-0 opacity-30">
-          <div className="w-full h-full bg-gradient-to-b from-black/50 to-black"></div>
-        </div>
-
+      <section className="hero-top-bg relative px-8 py-32 text-white">
         <div className="relative max-w-7xl mx-auto">
           <div className="inline-block bg-[#D97706] text-white px-6 py-2 rounded font-anaheim font-bold mb-8">
             EVENTS
