@@ -16,59 +16,55 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* Header + Hero share the same background for seamless blending */}
+      <div className="hero-top-bg">
+        <Header />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black px-4 py-20 text-white sm:px-8">
-        {/* Background decorative elements */}
-        <div className="pointer-events-none absolute inset-0">
-          {/* Purple gradient wash -- inspired by the impact report screenshot */}
-          <div className="absolute top-0 -left-32 h-full w-96 bg-gradient-to-r from-[#7C3AED]/20 to-transparent" />
-          <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#D97706]/10 blur-3xl" />
-        </div>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden px-4 py-20 text-white sm:px-8">
+          <div className="relative mx-auto max-w-7xl">
+            <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl">
+                <p className="font-anaheim mb-3 text-xs font-bold tracking-[0.2em] text-[#D97706]">
+                  PUBLICATIONS & RESEARCH
+                </p>
+                <h1 className="font-urbanist mb-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+                  Ideas That
+                  <br />
+                  <span className="text-[#7C3AED]">Build Futures</span>
+                </h1>
+                <p className="font-poppins max-w-xl text-base leading-relaxed text-gray-400">
+                  Articles, research papers, and case studies from the people of
+                  SST Makerspace -- documenting the journey of innovation in
+                  Nigerian engineering.
+                </p>
+              </div>
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="font-anaheim mb-3 text-xs font-bold tracking-[0.2em] text-[#D97706]">
-                PUBLICATIONS & RESEARCH
-              </p>
-              <h1 className="font-urbanist mb-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
-                Ideas That
-                <br />
-                <span className="text-[#7C3AED]">Build Futures</span>
-              </h1>
-              <p className="font-poppins max-w-xl text-base leading-relaxed text-gray-400">
-                Articles, research papers, and case studies from the people of
-                SST Makerspace -- documenting the journey of innovation in
-                Nigerian engineering.
-              </p>
-            </div>
-
-            {/* Stats bar on the right side of hero */}
-            <div className="w-full md:w-auto">
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-2 md:gap-8">
-                <div className="text-center md:text-right">
-                  <div className="font-urbanist text-4xl font-bold text-[#7C3AED]">
-                    6+
+              {/* Stats bar on the right side of hero */}
+              <div className="w-full md:w-auto">
+                <div className="grid grid-cols-2 gap-6 md:grid-cols-2 md:gap-8">
+                  <div className="text-center md:text-right">
+                    <div className="font-urbanist text-4xl font-bold text-[#7C3AED]">
+                      6+
+                    </div>
+                    <div className="font-anaheim text-xs text-gray-500">
+                      Publications
+                    </div>
                   </div>
-                  <div className="font-anaheim text-xs text-gray-500">
-                    Publications
-                  </div>
-                </div>
-                <div className="text-center md:text-right">
-                  <div className="font-urbanist text-4xl font-bold text-[#D97706]">
-                    4
-                  </div>
-                  <div className="font-anaheim text-xs text-gray-500">
-                    Authors
+                  <div className="text-center md:text-right">
+                    <div className="font-urbanist text-4xl font-bold text-[#D97706]">
+                      4
+                    </div>
+                    <div className="font-anaheim text-xs text-gray-500">
+                      Authors
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Featured Post */}
       <section className="bg-gray-50 px-4 py-16 sm:px-8">

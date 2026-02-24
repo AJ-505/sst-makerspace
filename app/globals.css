@@ -128,7 +128,7 @@
 
 .hero-top-bg {
   background-image:
-    linear-gradient(to bottom, rgb(8 4 28 / 0.82) 0%, rgb(34 16 72 / 0.62) 42%, rgb(94 53 177 / 0.46) 100%),
+    linear-gradient(to bottom, rgb(0 0 0 / 0.82) 0%, rgb(31 19 62 / 0.56) 46%, rgb(196 181 253 / 0.48) 100%),
     url("/hero-top-bg.png");
   background-position: center;
   background-repeat: no-repeat;

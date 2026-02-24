@@ -32,7 +32,7 @@ function NavLinkList() {
 
 export function Header() {
   return (
-    <header className="bg-black px-2 py-3 text-white sm:p-5">
+    <header className="relative z-20 px-2 py-3 text-white sm:p-5">
       <div className="flex justify-between">
         <Link href="/" className="flex items-center gap-2 sm:gap-3">
           <Image

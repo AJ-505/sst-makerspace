@@ -1,189 +1,427 @@
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import Image from "next/image"
-
-const TEAM_MEMBERS = [
-  { name: "SAVIOUR EMMANUEL", role: "PRESIDENT" },
-  { name: "ANTHONY ACHIKE", role: "STAFF ADVISOR" },
-  { name: "JOSEPH ADIGWE", role: "TECHNICAL AND DOCUMENTATION MANAGER" },
-  { name: "IMAN TOKOSI", role: "COMPETITION MANAGER" },
-  { name: "DEMILADE OGUNDEKO", role: "SPONSORSHIP AND INDUSTRY RELATIONS LEAD" },
-  { name: "OLUWATOFUNMI OLUSODO", role: "PUBLIC RELATIONS OFFICER" },
-  { name: "MOIJISOLA KUTI", role: "SOCIAL MEDIA MANAGER" },
-  { name: "CHINAZOR OZOIGBO", role: "PUBLIC RELATIONS & COMMUNICATIONS LEAD" },
-  { name: "PIUS NDUKWU", role: "PROJECT MANAGER" },
-  { name: "DIVINE AJIMOTOKIN", role: "COMPETITION MANAGER" },
-]
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Clock, MapPin, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function EventsPage() {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* Header + Hero share the same background for seamless blending */}
+      <div className="hero-top-bg">
+        <Header />
 
-      {/* Hero Section */}
-      <section className="hero-top-bg relative px-4 pt-8 pb-20 text-white sm:px-6 sm:pt-10 sm:pb-24 lg:px-8 lg:pt-14 lg:pb-32">
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="mb-6 inline-block rounded bg-[#D97706] px-4 py-2 font-anaheim font-bold text-white sm:mb-8 sm:px-6">
-            ABOUT SST MAKERSPACE
+        {/* Hero Section */}
+        <section className="relative px-8 py-32 text-white">
+          <div className="relative mx-auto max-w-7xl">
+            <div className="font-anaheim mb-8 inline-block rounded bg-[#D97706] px-6 py-2 font-bold text-white">
+              EVENTS
+            </div>
+
+            <h1 className="font-urbanist mb-6 text-center text-6xl font-bold md:text-7xl">
+              EXPLORING THE FUTURE
+            </h1>
+            <p className="font-poppins mx-auto mb-12 max-w-3xl text-center text-lg text-gray-300">
+              SST Makerspace is your launchpad for building change. Come
+              explore, build, and experience what happens when creativity meets
+              engineering.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      {/* Event Info Cards */}
+      <section className="relative z-10 -mt-16 bg-white px-8 py-8">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <p className="font-anaheim mb-3 text-sm text-gray-500">WHEN?</p>
+            <div className="flex items-start gap-4">
+              <Clock className="h-12 w-12 flex-shrink-0 text-[#7C3AED]" />
+              <div>
+                <p className="font-urbanist mb-1 text-2xl font-bold text-[#7C3AED]">
+                  12 Aug 2024
+                </p>
+                <p className="font-anaheim text-lg text-[#7C3AED]">
+                  9:00 AM - 5:00 PM
+                </p>
+              </div>
+            </div>
           </div>
 
-          <h1 className="mb-6 font-urbanist text-3xl leading-tight font-bold sm:text-5xl lg:text-7xl">
-            UNVEILING OUR MISSION,
-            <br />
-            VISION & TEAM
-          </h1>
-          <p className="mx-auto mb-10 max-w-3xl font-poppins text-base text-gray-300 italic sm:mb-12 sm:text-lg">
-            &quot;Africa&apos;s story has been written by others; we need to own our problems and solutions and write our
-            story&quot;
-            <br />
-            <span className="text-sm">- Paul Kagame</span>
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <p className="font-anaheim mb-3 text-sm text-gray-500">WHERE?</p>
+            <div className="flex items-start gap-4">
+              <MapPin className="h-12 w-12 flex-shrink-0 text-[#7C3AED]" />
+              <div>
+                <p className="font-anaheim text-xl leading-tight text-[#7C3AED]">
+                  School of Science and Technology,
+                  <br />
+                  Pan-Atlantic University.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <p className="font-anaheim mb-3 text-sm text-gray-500">FOR WHO?</p>
+            <div className="flex items-start gap-4">
+              <Users className="h-12 w-12 flex-shrink-0 text-[#7C3AED]" />
+              <div>
+                <p className="font-urbanist text-2xl font-bold text-[#7C3AED]">
+                  ENGINEERS
+                </p>
+                <p className="font-anaheim text-lg text-[#7C3AED]">
+                  & COMPUTER SCIENTISTS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="bg-gray-100 px-8 py-16">
+        <div className="mx-auto max-w-6xl rounded-3xl bg-white p-12 shadow-sm">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="relative">
+              <div className="mx-auto h-80 w-80 overflow-hidden rounded-full">
+                <Image
+                  src="/smiling-man-portrait.webp"
+                  alt="Person"
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="font-urbanist absolute -top-8 -right-4 text-9xl text-[#7C3AED] opacity-20">
+                &quot;
+              </div>
+              <h3 className="font-urbanist mb-6 text-3xl font-bold text-[#7C3AED]">
+                Here lies an illustrative quote by the person on the left.
+              </h3>
+              <p className="font-poppins mb-6 leading-relaxed text-gray-600">
+                SST Makerspace gives students a real environment to move from
+                ideas to working prototypes. The challenge structure builds
+                technical confidence, teamwork, and communication skills that
+                extend far beyond the competition day.
+              </p>
+              <p className="font-poppins font-semibold text-gray-800">
+                Dr John Doe
+              </p>
+              <p className="font-anaheim text-gray-500">VIP</p>
+              <div className="font-urbanist absolute right-0 -bottom-8 text-9xl text-[#7C3AED] opacity-20">
+                &quot;
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="bg-[#D97706] px-8 py-20">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="font-urbanist mb-12 text-5xl font-bold text-white">
+            How It Works
+          </h2>
+
+          <div className="mb-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl bg-[#92400E] p-8 text-white">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                </svg>
+              </div>
+              <h3 className="font-urbanist mb-4 text-2xl font-bold">
+                Workshop Sessions
+              </h3>
+              <p className="font-poppins mb-6 leading-relaxed text-white/90">
+                The Planning committee conducts a certain number of workshops to
+                prepare students for the competition. The topic and number of
+                workshops is determined by the committee.
+              </p>
+              <Button className="font-anaheim bg-white font-bold text-[#D97706] hover:bg-gray-100">
+                REGISTER NOW →
+              </Button>
+            </div>
+
+            <div className="rounded-2xl bg-[#92400E] p-8 text-white">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
+                <Users className="h-6 w-6" />
+              </div>
+              <h3 className="font-urbanist mb-4 text-2xl font-bold">
+                Build Your Team
+              </h3>
+              <p className="font-poppins mb-6 leading-relaxed text-white/90">
+                Teams of 3 are formed to compete in the event. Teams comprise
+                students of the School of Science and Technology.
+              </p>
+              <Button className="font-anaheim bg-white font-bold text-[#D97706] hover:bg-gray-100">
+                REGISTER NOW →
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl bg-[#92400E] p-8 text-white">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </div>
+              <h3 className="font-urbanist mb-4 text-2xl font-bold">
+                Mock Competition & Qualifiers
+              </h3>
+              <p className="font-poppins mb-6 leading-relaxed text-white/90">
+                Only the best applicants are allowed to compete. The quality of
+                the bots is used to determine the final competitors.
+              </p>
+              <Button className="font-anaheim bg-white font-bold text-[#D97706] hover:bg-gray-100">
+                REGISTER NOW →
+              </Button>
+            </div>
+
+            <div className="rounded-2xl bg-[#92400E] p-8 text-white">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+                </svg>
+              </div>
+              <h3 className="font-urbanist mb-4 text-2xl font-bold">
+                Main Competition Event
+              </h3>
+              <p className="font-poppins mb-6 leading-relaxed text-white/90">
+                Qualified teams race against each other to determine the overall
+                winner of the competition.
+              </p>
+              <Button className="font-anaheim bg-white font-bold text-[#D97706] hover:bg-gray-100">
+                REGISTER NOW →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2024 MotoBot Challenge */}
+      <section className="bg-white px-8 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-[#7C3AED]">
+              <div className="h-3 w-3 rounded-full bg-[#7C3AED]"></div>
+            </div>
+            <h3 className="font-urbanist text-5xl font-bold text-[#7C3AED]">
+              2024
+            </h3>
+          </div>
+
+          <h2 className="font-urbanist mb-4 text-5xl font-bold text-[#7C3AED]">
+            MotoBot Challenge
+          </h2>
+          <p className="font-anaheim mb-8 text-xl text-gray-500 italic">
+            Theme: The Future of Work in Africa
           </p>
-        </div>
-      </section>
 
-      {/* Who We Are */}
-      <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="mb-8 font-urbanist text-3xl font-bold text-[#D97706] sm:mb-10 sm:text-4xl lg:mb-12 lg:text-5xl">
-            WHO WE ARE
-          </h2>
+          <div className="mb-12 rounded-2xl bg-gray-50 p-8">
+            <h4 className="font-urbanist mb-4 text-2xl font-bold text-[#D97706]">
+              Problem Statement
+            </h4>
+            <p className="font-poppins mb-8 text-gray-700">
+              Design and build a wirelessly controlled MotoBot that demonstrates
+              speed, agility, and precise steering on the race track.
+            </p>
 
-          <div className="grid gap-6 mb-6 md:grid-cols-2">
-            <div className="order-1 rounded-3xl bg-[#D97706] p-6 text-white sm:p-8 lg:p-10">
-              <div className="flex items-baseline gap-4 mb-6">
-                <span className="font-urbanist text-4xl font-bold sm:text-5xl lg:text-6xl">01</span>
-                <span className="font-urbanist text-2xl font-bold sm:text-3xl">GOAL</span>
+            <div className="grid grid-cols-5 gap-6 rounded-xl bg-white p-8 text-center shadow-sm">
+              <div>
+                <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                  30+
+                </div>
+                <div className="font-anaheim text-gray-600">Participants</div>
               </div>
-              <p className="font-poppins text-base leading-relaxed sm:text-lg">
-                To foster innovation and creativity among students, equipping them with practical skills.
-              </p>
-            </div>
-
-            <div className="order-3 row-span-1 flex flex-col justify-center rounded-3xl bg-[#92400E] p-6 text-white sm:p-8 md:order-2 md:row-span-2 lg:p-10">
-              <div className="flex items-baseline gap-4 mb-6">
-                <span className="font-urbanist text-4xl font-bold sm:text-5xl lg:text-6xl">03</span>
-                <span className="font-urbanist text-2xl font-bold sm:text-3xl">MISSION STATEMENT</span>
+              <div>
+                <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                  10+
+                </div>
+                <div className="font-anaheim text-gray-600">Teams</div>
               </div>
-              <p className="font-poppins text-base leading-relaxed sm:text-lg">
-                We empower Africa&apos;s innovators through hands-on, interdisciplinary projects that turn ideas into
-                practical, sustainable hardware solutions.
-              </p>
-            </div>
-
-            <div className="order-2 rounded-3xl bg-[#7C3AED] p-6 text-white sm:p-8 md:order-3 lg:p-10">
-              <div className="flex items-baseline gap-4 mb-6">
-                <span className="font-urbanist text-4xl font-bold sm:text-5xl lg:text-6xl">02</span>
-                <span className="font-urbanist text-2xl font-bold sm:text-3xl">IMPACT</span>
+              <div>
+                <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                  300
+                </div>
+                <div className="font-anaheim text-gray-600">Attendes</div>
               </div>
-              <p className="font-poppins text-base leading-relaxed sm:text-lg">
-                To create a generation of problem-solvers and innovators who can tackle real-world challenges.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SDG Goals */}
-      <section className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
-        <div className="mx-auto max-w-6xl rounded-3xl bg-white p-6 shadow-sm sm:p-8 lg:p-12">
-          <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-            <div>
-              <h2 className="mb-4 font-urbanist text-3xl font-bold text-[#7C3AED] sm:mb-6 sm:text-4xl">
-                OUR ALIGNMENT WITH THE SDG GOALS
-              </h2>
-              <p className="font-poppins leading-relaxed text-gray-600">
-                At SST Makerspace, we are committed to driving innovation and building a hardware inclusive future. Our
-                mission aligns with the United Nations Sustainable Development Goals to create lasting change.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl bg-[#C5192D] p-5 text-white sm:p-6">
-                <div className="mb-2 text-3xl font-bold sm:text-4xl">4</div>
-                <div className="mb-2 font-anaheim text-sm leading-snug sm:text-base">QUALITY EDUCATION</div>
-                <svg className="h-12 w-12 sm:h-16 sm:w-16" fill="white" viewBox="0 0 24 24">
-                  <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-                </svg>
+              <div>
+                <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                  5
+                </div>
+                <div className="font-anaheim text-gray-600">Panelists</div>
               </div>
-              <div className="rounded-2xl bg-[#A21942] p-5 text-white sm:p-6">
-                <div className="mb-2 text-3xl font-bold sm:text-4xl">8</div>
-                <div className="mb-2 font-anaheim text-sm leading-snug sm:text-base">DECENT WORK AND ECONOMIC GROWTH</div>
-                <svg className="h-12 w-12 sm:h-16 sm:w-16" fill="white" viewBox="0 0 24 24">
-                  <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
-                </svg>
-              </div>
-              <div className="rounded-2xl bg-[#FD6925] p-5 text-white sm:p-6">
-                <div className="mb-2 text-3xl font-bold sm:text-4xl">9</div>
-                <div className="text-xs font-anaheim mb-2">INDUSTRY, INNOVATION AND INFRASTRUCTURE</div>
-                <svg className="h-12 w-12 sm:h-16 sm:w-16" fill="white" viewBox="0 0 24 24">
-                  <path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14zM6 13h5v4H6zm6-6h4v3h-4zM6 7h5v5H6zm6 4h4v6h-4z" />
-                </svg>
-              </div>
-              <div className="rounded-2xl bg-[#19486A] p-5 text-white sm:p-6">
-                <div className="mb-2 text-3xl font-bold sm:text-4xl">17</div>
-                <div className="text-xs font-anaheim mb-2">PARTNERSHIPS FOR THE GOALS</div>
-                <svg className="h-12 w-12 sm:h-16 sm:w-16" fill="white" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z" />
-                </svg>
+              <div>
+                <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                  10+
+                </div>
+                <div className="font-anaheim text-gray-600">Faculty</div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Meet Our Team */}
-      <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="mb-8 font-urbanist text-3xl font-bold text-[#7C3AED] sm:mb-10 sm:text-4xl lg:mb-12 lg:text-5xl">
-            MEET OUR TEAM
-          </h2>
-
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-            {TEAM_MEMBERS.map((member, idx) => (
-              <div key={idx} className="relative group min-w-0">
-                <div className="mb-3 aspect-square overflow-hidden rounded-3xl bg-gray-200 sm:mb-4">
+          {/* Testimonial 2024 */}
+          <div className="rounded-3xl bg-gray-100 p-12">
+            <div className="grid items-center gap-12 md:grid-cols-2">
+              <div className="relative">
+                <div className="mx-auto h-80 w-80 overflow-hidden rounded-full">
                   <Image
-                    src={`/professional-portrait-.webp?height=400&width=400&query=professional-portrait-${idx}`}
-                    alt={member.name}
+                    src="/smiling-man-portrait.webp"
+                    alt="Person"
                     width={400}
                     height={400}
-                    className="w-full h-full object-cover grayscale"
+                    className="object-cover"
                   />
                 </div>
-                <div className="rounded-2xl bg-[#7C3AED] p-4 text-center text-white sm:p-5">
-                  <div className="font-urbanist text-xl leading-tight font-bold break-words sm:text-2xl">{member.name}</div>
-                  <div className="mt-1 font-anaheim text-base leading-tight italic break-words sm:text-lg">{member.role}</div>
+              </div>
+              <div className="relative">
+                <div className="font-urbanist absolute -top-8 -right-4 text-9xl text-[#7C3AED] opacity-20">
+                  &quot;
+                </div>
+                <h3 className="font-urbanist mb-6 text-3xl font-bold text-[#7C3AED]">
+                  Here lies an illustrative quote by the person on the left.
+                </h3>
+                <p className="font-poppins mb-6 leading-relaxed text-gray-600">
+                  The event proved that student-led teams can deliver practical
+                  hardware solutions when given strong mentorship, clear goals,
+                  and room to experiment.
+                </p>
+                <div className="font-urbanist absolute right-0 -bottom-8 text-9xl text-[#7C3AED] opacity-20">
+                  &quot;
                 </div>
               </div>
-            ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Events Timeline */}
+      <section className="bg-gray-50 px-8 py-20">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="font-urbanist mb-16 text-5xl font-bold text-[#D97706]">
+            Our Events
+          </h2>
+
+          {/* 2025 GripperBot */}
+          <div className="relative mb-16 border-l-4 border-[#7C3AED] pl-12">
+            <div className="absolute top-0 -left-[18px] h-8 w-8 rounded-full border-4 border-white bg-[#7C3AED]"></div>
+
+            <div className="mb-6 flex items-center gap-4">
+              <h3 className="font-urbanist text-5xl font-bold text-[#7C3AED]">
+                2025
+              </h3>
+            </div>
+
+            <h4 className="font-urbanist mb-4 text-4xl font-bold text-[#7C3AED]">
+              GripperBot Challenge
+            </h4>
+            <p className="font-anaheim mb-8 text-xl text-gray-500 italic">
+              Theme: Re-imagining the Future of Labor in the African Ecosystem
+            </p>
+
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <h5 className="font-urbanist mb-4 text-2xl font-bold text-[#D97706]">
+                Problem Statement
+              </h5>
+              <p className="font-poppins mb-8 text-gray-700">
+                Design and build a remote-controlled MotoBot with a gripper that
+                can handle and move loads more safely and efficiently,
+                demonstrating practical automation for African industrial
+                contexts.
+              </p>
+
+              <div className="grid grid-cols-5 gap-6 rounded-xl bg-gray-50 p-8 text-center">
+                <div>
+                  <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                    30+
+                  </div>
+                  <div className="font-anaheim text-gray-600">Participants</div>
+                </div>
+                <div>
+                  <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                    5+
+                  </div>
+                  <div className="font-anaheim text-gray-600">Teams</div>
+                </div>
+                <div>
+                  <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                    300
+                  </div>
+                  <div className="font-anaheim text-gray-600">Attendes</div>
+                </div>
+                <div>
+                  <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                    5
+                  </div>
+                  <div className="font-anaheim text-gray-600">Panelists</div>
+                </div>
+                <div>
+                  <div className="font-urbanist mb-2 text-4xl font-bold text-[#7C3AED]">
+                    10+
+                  </div>
+                  <div className="font-anaheim text-gray-600">Faculty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 2024 MotoBot in timeline */}
+          <div className="relative pl-12">
+            <div className="absolute top-0 -left-[18px] h-8 w-8 rounded-full border-4 border-[#7C3AED] bg-white">
+              <div className="h-full w-full rounded-full border-2 border-[#7C3AED]"></div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <h3 className="font-urbanist text-5xl font-bold text-[#7C3AED]">
+                2024
+              </h3>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-white px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="absolute left-0 top-0 hidden h-full w-20 md:block lg:w-32">
-          <svg viewBox="0 0 100 400" className="w-full h-full">
-            <path d="M 0 0 Q 50 100 0 200 Q 50 300 0 400" fill="#7C3AED" />
+      <section className="relative bg-white px-8 py-20">
+        <div className="absolute top-0 left-0 h-full w-32">
+          <svg viewBox="0 0 100 400" className="h-full w-full">
+            <path d="M 0 200 Q 50 100 100 200 Q 50 300 0 400" fill="#7C3AED" />
           </svg>
         </div>
-        <div className="absolute right-0 top-0 hidden h-full w-20 md:block lg:w-32">
-          <svg viewBox="0 0 100 400" className="w-full h-full">
-            <path d="M 100 0 Q 50 100 100 200 Q 50 300 100 400" fill="#D97706" />
+        <div className="absolute top-0 right-0 h-full w-32">
+          <svg viewBox="0 0 100 400" className="h-full w-full">
+            <path d="M 100 0 Q 50 100 0 200 Q 50 300 100 400" fill="#D97706" />
           </svg>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-xl sm:p-10 lg:p-16">
-          <h2 className="mb-4 text-center font-urbanist text-3xl font-bold text-[#7C3AED] sm:mb-6 sm:text-4xl lg:text-5xl">
-            Want to join our team?
+        <div className="relative z-10 mx-auto max-w-4xl rounded-3xl bg-white p-12 shadow-xl">
+          <h2 className="font-urbanist mb-6 text-center text-4xl font-bold text-[#7C3AED]">
+            Interested in being a sponsor?
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center font-poppins text-gray-600">
-            We are always looking for students and collaborators who want to build, test, and ship impactful hardware
-            projects. Join the team to contribute your skills and learn by doing.
+          <p className="font-poppins mx-auto mb-8 max-w-2xl text-center text-gray-600">
+            Partner with SST Makerspace to support student innovators building
+            practical solutions for real industry problems. Your sponsorship
+            helps fund materials, mentorship, and competition prizes.
           </p>
           <div className="flex justify-center">
-            <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] h-auto px-6 py-4 text-base font-urbanist font-bold text-white sm:px-8 sm:py-6 sm:text-lg">
-              BE A VOLUNTEER
+            <Button className="font-urbanist bg-[#7C3AED] px-8 py-6 text-lg font-bold text-white hover:bg-[#6D28D9]">
+              BE A SPONSOR
             </Button>
           </div>
         </div>
@@ -191,5 +429,5 @@ export default function EventsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
