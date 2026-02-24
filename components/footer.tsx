@@ -4,9 +4,9 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-[#581C87] text-white py-12 px-8">
+    <footer className="bg-[#581C87] px-4 py-12 text-white sm:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 mb-8">
+        <div className="mb-8 grid gap-10 md:grid-cols-2 md:gap-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image src="/logo.svg" alt="SST Makerspace Logo" width={40} height={40} />
@@ -19,8 +19,8 @@ export function Footer() {
             <p className="font-poppins">+234 575 4849 393</p>
           </div>
 
-          <div className="flex justify-end items-start">
-            <nav className="flex gap-8 font-poppins">
+          <div className="flex items-start md:justify-end">
+            <nav className="flex flex-wrap gap-x-6 gap-y-3 font-poppins md:justify-end">
               <Link href="#" className="hover:text-gray-300">
                 Help Centre
               </Link>
@@ -40,9 +40,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center pt-8 border-t border-white/20">
-          <p className="text-sm font-poppins">© 2025 SST-Makerspace, Pan-Atlantic University. All rights reserved.</p>
-          <div className="flex gap-4">
+        <div className="flex flex-col gap-6 border-t border-white/20 pt-8 md:flex-row md:items-center md:justify-between">
+          <p className="max-w-md text-sm font-poppins">© 2025 SST-Makerspace, Pan-Atlantic University. All rights reserved.</p>
+          <div className="flex flex-wrap gap-3 md:gap-4">
             <a
               href="#"
               className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30"
@@ -79,4 +79,3 @@ export function Footer() {
     </footer>
   )
 }
-

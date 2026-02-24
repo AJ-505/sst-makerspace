@@ -123,19 +123,18 @@ export default function HomePage() {
       </section>
 
       {/* Hardware Solutions */}
-      <section className="py-16 px-8">
+      <section className="px-4 py-16 sm:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#7C3AED] text-white p-12 rounded-3xl">
-            <div className="flex justify-between items-start">
+          <div className="rounded-3xl bg-[#7C3AED] p-8 text-white sm:p-12">
+            <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
               <div className="max-w-2xl">
                 <h2 className="text-3xl font-urbanist font-bold mb-4">Hardware Solutions Used By Our Participants</h2>
                 <p className="font-poppins text-white/90">
-                  Participants at SST Makerspace work with real hardware tools like Arduino and ESP32 microcontrollers,
-                  motor drivers, sensors, and wireless modules to build functional, remote-controlled robots. They also
-                  use 3D-printed parts, grippers, and batteries to simulate real industrial applications.
+                  SST Makerspace participants use Arduino and ESP32 boards, motor drivers, sensors, and wireless modules
+                  to build remote-controlled robots. They also prototype with 3D-printed parts, grippers, and batteries.
                 </p>
               </div>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4 md:justify-end">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
                   <span className="text-2xl">🔧</span>
                 </div>
@@ -155,17 +154,17 @@ export default function HomePage() {
       </section>
 
       {/* Competitions */}
-      <section className="py-16 px-8 bg-gray-50">
+      <section className="bg-gray-50 px-4 py-16 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-urbanist font-bold text-[#D97706] mb-12 text-center">Our Competitions</h2>
 
           {/* MotoBot Competition */}
-          <div className="bg-white rounded-3xl p-8 mb-8 shadow-sm">
+          <div className="mb-8 rounded-3xl bg-white p-6 shadow-sm sm:p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex gap-8">
-                <div className="text-8xl font-urbanist font-bold">1</div>
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                <div className="text-6xl font-urbanist font-bold leading-none sm:text-8xl">1</div>
                 <div>
-                  <h3 className="text-3xl font-urbanist font-bold text-[#7C3AED] mb-2">MotoBot Competition</h3>
+                  <h3 className="mb-2 text-2xl font-urbanist font-bold text-[#7C3AED] sm:text-3xl">MotoBot Competition</h3>
                   <p className="text-sm font-anaheim text-gray-500 mb-4">The Future of Work 2024</p>
                   <p className="font-poppins text-gray-700 mb-6">
                     This event required participants to design a motobot which is a wirelessly controlled vehicle. The
@@ -188,12 +187,12 @@ export default function HomePage() {
           </div>
 
           {/* GripperBot Competition */}
-          <div className="bg-white rounded-3xl p-8 shadow-sm">
+          <div className="rounded-3xl bg-white p-6 shadow-sm sm:p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex gap-8">
-                <div className="text-8xl font-urbanist font-bold">2</div>
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                <div className="text-6xl font-urbanist font-bold leading-none sm:text-8xl">2</div>
                 <div>
-                  <h3 className="text-3xl font-urbanist font-bold text-[#7C3AED] mb-2">GripperBot Competition</h3>
+                  <h3 className="mb-2 text-2xl font-urbanist font-bold text-[#7C3AED] sm:text-3xl">GripperBot Competition</h3>
                   <p className="text-sm font-anaheim text-gray-500 mb-4">The Future of Work 2026</p>
                   <p className="font-poppins text-gray-700 mb-6">
                     The event encourages participants to tackle the labor issue in Africa by designing a motobot with a
@@ -342,29 +341,29 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-8 bg-gray-50 relative">
-        <div className="absolute left-0 top-0 w-32 h-full">
+      <section className="relative bg-gray-50 px-4 py-20 sm:px-8">
+        <div className="absolute left-0 top-0 h-full w-10 sm:w-32">
           <svg viewBox="0 0 100 400" className="w-full h-full">
             <path d="M 0 200 Q 50 100 100 200 Q 50 300 0 400" fill="#7C3AED" />
           </svg>
         </div>
-        <div className="absolute right-0 top-0 w-32 h-full">
+        <div className="absolute right-0 top-0 h-full w-10 sm:w-32">
           <svg viewBox="0 0 100 400" className="w-full h-full">
             <path d="M 100 0 Q 50 100 0 200 Q 50 300 100 400" fill="#D97706" />
           </svg>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-12 shadow-xl relative z-10">
-          <h2 className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-6 text-center">Ready to make a change?</h2>
+        <div className="relative z-10 mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-xl sm:p-12">
+          <h2 className="mb-6 text-center text-3xl font-urbanist font-bold text-[#7C3AED] sm:text-4xl">Ready to make a change?</h2>
           <p className="font-poppins text-gray-600 text-center mb-8 max-w-2xl mx-auto">
             Let us join hands in inspiring the young minds that will go on to transform the hardware space, building
             products that can compete in the global market.
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-6 font-urbanist font-bold">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <Button className="w-full bg-[#7C3AED] px-6 py-5 font-urbanist font-bold text-white hover:bg-[#6D28D9] sm:w-auto sm:px-8 sm:py-6">
               BE A SPONSOR
             </Button>
-            <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-6 font-urbanist font-bold">
+            <Button className="w-full bg-[#7C3AED] px-6 py-5 font-urbanist font-bold text-white hover:bg-[#6D28D9] sm:w-auto sm:px-8 sm:py-6">
               BE A VOLUNTEER
             </Button>
           </div>
@@ -375,4 +374,3 @@ export default function HomePage() {
     </div>
   )
 }
-
