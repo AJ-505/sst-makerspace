@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import {
+  CompetitionCard,
+  FeatureCard,
+  StatCard,
+  TestimonialCard,
+  UpcomingChallengeCard,
+} from "@/components/home/cards"
+import { COMPETITIONS, HOME_FEATURES, HOME_STATS, TESTIMONIALS, UPCOMING_CHALLENGES } from "@/components/home/constants"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -32,22 +40,9 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="bg-white py-8 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-2">30+</div>
-            <div className="font-anaheim text-gray-600">Participants</div>
-          </div>
-          <div>
-            <div className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-2">15+</div>
-            <div className="font-anaheim text-gray-600">Teams</div>
-          </div>
-          <div>
-            <div className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-2">300</div>
-            <div className="font-anaheim text-gray-600">Attendees</div>
-          </div>
-          <div>
-            <div className="text-4xl font-urbanist font-bold text-[#7C3AED] mb-2">1</div>
-            <div className="font-anaheim text-gray-600">Winner</div>
-          </div>
+          {HOME_STATS.map((stat) => (
+            <StatCard key={stat.label} {...stat} />
+          ))}
         </div>
       </section>
 
@@ -68,6 +63,7 @@ export default function HomePage() {
               alt="SST Makerspace workshop"
               fill
               className="object-cover"
+              sizes="(min-width: 768px) 45vw, 100vw"
             />
           </div>
         </div>
@@ -76,49 +72,9 @@ export default function HomePage() {
       {/* Features */}
       <section className="py-16 px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <div className="text-4xl">🎓</div>
-            </div>
-            <h3 className="text-xl font-urbanist font-bold text-[#D97706] mb-3">Experiential Learning</h3>
-            <p className="font-poppins text-gray-600 text-sm">
-              We invite industry to set tech competitions and workshops that puts students with our participants get
-              hands-on experience with various technologies.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <div className="text-4xl">🤝</div>
-            </div>
-            <h3 className="text-xl font-urbanist font-bold text-[#D97706] mb-3">Discipline Collaboration</h3>
-            <p className="font-poppins text-gray-600 text-sm">
-              Our projects and workshops accept participants from across different disciplines such as Computer Science
-              and Engineering.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <div className="text-4xl">🎮</div>
-            </div>
-            <h3 className="text-xl font-urbanist font-bold text-[#D97706] mb-3">Fun & Engaging</h3>
-            <p className="font-poppins text-gray-600 text-sm">
-              We ensure our experience is provided to our participants and audiences by following a rigor style format
-              for our events.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <div className="text-4xl">🌍</div>
-            </div>
-            <h3 className="text-xl font-urbanist font-bold text-[#D97706] mb-3">Impact-Oriented Thinking</h3>
-            <p className="font-poppins text-gray-600 text-sm">
-              While solving real-world problems, Makerspace fosters innovation that goes beyond the classroom and
-              contributes to Africa's tech ecosystem.
-            </p>
-          </div>
+          {HOME_FEATURES.map((feature) => (
+            <FeatureCard key={feature.title} {...feature} />
+          ))}
         </div>
       </section>
 
@@ -158,61 +114,41 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-urbanist font-bold text-[#D97706] mb-12 text-center">Our Competitions</h2>
 
-          {/* MotoBot Competition */}
           <div className="mb-8 rounded-3xl bg-white p-6 shadow-sm sm:p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-                <div className="text-6xl font-urbanist font-bold leading-none sm:text-8xl">1</div>
-                <div>
-                  <h3 className="mb-2 text-2xl font-urbanist font-bold text-[#7C3AED] sm:text-3xl">MotoBot Competition</h3>
-                  <p className="text-sm font-anaheim text-gray-500 mb-4">The Future of Work 2024</p>
-                  <p className="font-poppins text-gray-700 mb-6">
-                    This event required participants to design a motobot which is a wirelessly controlled vehicle. The
-                    speed and steering accuracy of the bots were tested here.
-                  </p>
-                  <Button className="bg-[#D97706] hover:bg-[#B45309] text-white font-anaheim font-bold">
-                    LEARN MORE
-                  </Button>
+            <div className="grid items-center gap-8 md:grid-cols-2">
+              <div>
+                <p className="mb-3 text-sm font-anaheim font-bold tracking-wide text-[#7C3AED]">UPCOMING</p>
+                <h3 className="mb-3 text-2xl font-urbanist font-bold text-[#7C3AED] sm:text-3xl">
+                  Upcoming Competitions at SST Makerspace
+                </h3>
+                <p className="font-poppins text-gray-700 mb-6">
+                  New to SST Makerspace? Start here. Explore the two competition tracks, choose your challenge, and
+                  build practical solutions with your team.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {UPCOMING_CHALLENGES.map((challenge) => (
+                    <UpcomingChallengeCard key={challenge.title} {...challenge} />
+                  ))}
                 </div>
               </div>
-              <div className="relative h-64 rounded-xl overflow-hidden">
+              <div className="overflow-hidden rounded-2xl border border-black/5 bg-gray-100">
                 <Image
-                  src="/small-robots-racing-on-track.jpg"
-                  alt="MotoBot Competition"
-                  fill
-                  className="object-cover"
+                  src="/sstms-2026-competitions-flyer.jpeg"
+                  alt="SST Makerspace upcoming competitions flyer"
+                  width={1080}
+                  height={1350}
+                  className="h-full w-full object-cover"
+                  sizes="(min-width: 768px) 45vw, 100vw"
                 />
               </div>
             </div>
           </div>
 
-          {/* GripperBot Competition */}
-          <div className="rounded-3xl bg-white p-6 shadow-sm sm:p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-                <div className="text-6xl font-urbanist font-bold leading-none sm:text-8xl">2</div>
-                <div>
-                  <h3 className="mb-2 text-2xl font-urbanist font-bold text-[#7C3AED] sm:text-3xl">GripperBot Competition</h3>
-                  <p className="text-sm font-anaheim text-gray-500 mb-4">The Future of Work 2026</p>
-                  <p className="font-poppins text-gray-700 mb-6">
-                    The event encourages participants to tackle the labor issue in Africa by designing a motobot with a
-                    gripper. Thus addressing the issue of heavy loads being lifted manually.
-                  </p>
-                  <Button className="bg-[#D97706] hover:bg-[#B45309] text-white font-anaheim font-bold">
-                    LEARN MORE
-                  </Button>
-                </div>
-              </div>
-              <div className="relative h-64 rounded-xl overflow-hidden">
-                <Image
-                  src="/industrial-robotic-arm-gripper-orange.jpg"
-                  alt="GripperBot Competition"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          {COMPETITIONS.map((competition) => (
+            <div key={competition.title} className={competition.index === "1" ? "mb-8" : undefined}>
+              <CompetitionCard {...competition} />
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -265,77 +201,15 @@ export default function HomePage() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-6">
-            <div className="bg-[#92400E] text-white p-6 rounded-xl">
-              <div className="text-4xl font-urbanist mb-4">"</div>
-              <p className="mb-6 font-poppins text-sm">
-                Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <p className="font-urbanist font-semibold text-sm">Dr Darlington Agbor</p>
-                  <p className="font-anaheim text-xs text-white/70">Faculty SST</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#92400E] text-white p-6 rounded-xl">
-              <div className="text-4xl font-urbanist mb-4">"</div>
-              <p className="mb-6 font-poppins text-sm">
-                This is beautiful and fantastic. And to think that it was entirely organized by students.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <p className="font-urbanist font-semibold text-sm">Dr Darlington Agbor</p>
-                  <p className="font-anaheim text-xs text-white/70">Faculty SST</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#92400E] text-white p-6 rounded-xl">
-              <div className="text-4xl font-urbanist mb-4">"</div>
-              <p className="mb-6 font-poppins text-sm">
-                Amazing execution. We are definitely investing our hardware resources in this in coming session.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <p className="font-urbanist font-semibold text-sm">Dr Enehimon Agbor</p>
-                  <p className="font-anaheim text-xs text-white/70">Dean SST</p>
-                </div>
-              </div>
-            </div>
+            {TESTIMONIALS.slice(0, 3).map((testimonial, idx) => (
+              <TestimonialCard key={`${testimonial.author}-${idx}`} {...testimonial} />
+            ))}
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-[#92400E] text-white p-6 rounded-xl">
-              <div className="text-4xl font-urbanist mb-4">"</div>
-              <p className="mb-6 font-poppins text-sm">
-                Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <p className="font-urbanist font-semibold text-sm">Dr Darlington Agbor</p>
-                  <p className="font-anaheim text-xs text-white/70">Faculty SST</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#92400E] text-white p-6 rounded-xl">
-              <div className="text-4xl font-urbanist mb-4">"</div>
-              <p className="mb-6 font-poppins text-sm">
-                Our Engineering students hosted the Motobot showcasing their innovative and problem solving skills.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <p className="font-urbanist font-semibold text-sm">Dr Darlington Agbor</p>
-                  <p className="font-anaheim text-xs text-white/70">Faculty SST</p>
-                </div>
-              </div>
-            </div>
+            {TESTIMONIALS.slice(3).map((testimonial, idx) => (
+              <TestimonialCard key={`${testimonial.author}-more-${idx}`} {...testimonial} />
+            ))}
           </div>
         </div>
       </section>

@@ -79,7 +79,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="text-9xl text-[#7C3AED] absolute -top-8 -right-4 opacity-20 font-urbanist">"</div>
+              <div className="text-9xl text-[#7C3AED] absolute -top-8 -right-4 opacity-20 font-urbanist">&quot;</div>
               <h3 className="text-3xl font-urbanist font-bold text-[#7C3AED] mb-6">
                 Here lies an illustrative quote by the person on the left.
               </h3>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               </p>
               <p className="font-poppins text-gray-800 font-semibold">Dr John Doe</p>
               <p className="font-anaheim text-gray-500">VIP</p>
-              <div className="text-9xl text-[#7C3AED] absolute -bottom-8 right-0 opacity-20 font-urbanist">"</div>
+              <div className="text-9xl text-[#7C3AED] absolute -bottom-8 right-0 opacity-20 font-urbanist">&quot;</div>
             </div>
           </div>
         </div>
@@ -185,7 +185,8 @@ export default function AboutPage() {
           <div className="bg-gray-50 rounded-2xl p-8 mb-12">
             <h4 className="text-2xl font-urbanist font-bold text-[#D97706] mb-4">Problem Statement</h4>
             <p className="font-poppins text-gray-700 mb-8">
-              Design a Motobot that meets the speed and steering requirements of the given track.
+              Design and build a wirelessly controlled MotoBot that demonstrates speed, agility, and precise steering
+              on the race track.
             </p>
 
             <div className="bg-white rounded-xl shadow-sm p-8 grid grid-cols-5 gap-6 text-center">
@@ -227,7 +228,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative">
-                <div className="text-9xl text-[#7C3AED] absolute -top-8 -right-4 opacity-20 font-urbanist">"</div>
+                <div className="text-9xl text-[#7C3AED] absolute -top-8 -right-4 opacity-20 font-urbanist">&quot;</div>
                 <h3 className="text-3xl font-urbanist font-bold text-[#7C3AED] mb-6">
                   Here lies an illustrative quote by the person on the left.
                 </h3>
@@ -235,7 +236,7 @@ export default function AboutPage() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ex vel faucibus iaculis. Proin
                   viverra facilisis vehicula. Duis mattis turpis sem, nec porta nisl tristique id.
                 </p>
-                <div className="text-9xl text-[#7C3AED] absolute -bottom-8 right-0 opacity-20 font-urbanist">"</div>
+                <div className="text-9xl text-[#7C3AED] absolute -bottom-8 right-0 opacity-20 font-urbanist">&quot;</div>
               </div>
             </div>
           </div>
@@ -261,7 +262,8 @@ export default function AboutPage() {
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <h5 className="text-2xl font-urbanist font-bold text-[#D97706] mb-4">Problem Statement</h5>
               <p className="font-poppins text-gray-700 mb-8">
-                Design a Gripper Bot with wheels that can pick objects and move them onto a stack.
+                Design a wheeled GripperBot that can pick objects, transport them, and place them accurately onto a
+                stack.
               </p>
 
               <div className="bg-gray-50 rounded-xl p-8 grid grid-cols-5 gap-6 text-center">
@@ -335,4 +337,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
