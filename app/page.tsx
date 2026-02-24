@@ -157,36 +157,63 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-urbanist font-bold text-[#D97706] mb-12 text-center">Our Past Sponsors</h2>
           <div className="flex justify-center items-center gap-12 flex-wrap">
-            <div className="w-20 h-20 bg-[#00979D] rounded-full flex items-center justify-center">
-              <span className="text-white text-3xl font-bold">∞</span>
-            </div>
-            <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center">
-              <span className="text-white text-xl font-bold">BYBIT</span>
-            </div>
-            <div className="w-20 h-20 flex items-center justify-center">
-              <div className="flex gap-1">
-                <div className="w-8 h-8 bg-red-500 rounded-full"></div>
-                <div className="w-8 h-8 bg-orange-500 rounded-full -ml-2"></div>
+            <div className="group relative">
+              <div className="w-20 h-20 bg-[#00979D] rounded-full flex items-center justify-center">
+                <span className="text-white text-3xl font-bold">∞</span>
               </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                Arduino
+              </span>
             </div>
-            <div className="w-20 h-20 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="flex justify-center gap-1 mb-1">
-                  <div className="w-2 h-2 bg-black rounded-full"></div>
-                  <div className="w-2 h-2 bg-black rounded-full"></div>
-                  <div className="w-2 h-2 bg-black rounded-full"></div>
+            <div className="group relative">
+              <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center">
+                <span className="text-white text-xl font-bold">BYBIT</span>
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                BYBIT
+              </span>
+            </div>
+            <div className="group relative">
+              <div className="w-20 h-20 flex items-center justify-center">
+                <div className="flex gap-1">
+                  <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+                  <div className="w-8 h-8 bg-orange-500 rounded-full -ml-2"></div>
                 </div>
-                <div className="w-12 h-6 bg-black rounded-lg"></div>
               </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                Mastercard
+              </span>
             </div>
-            <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 bg-white rounded"></div>
+            <div className="group relative">
+              <div className="w-20 h-20 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center">
+                <div className="text-center">
+                  <div className="flex justify-center gap-1 mb-1">
+                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                  </div>
+                  <div className="w-12 h-6 bg-black rounded-lg"></div>
+                </div>
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                Tesla
+              </span>
             </div>
-            <div className="w-20 h-20 bg-[#00979D] rounded-full flex items-center justify-center">
-              <span className="text-white text-3xl font-bold">∞</span>
+            <div className="group relative">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-white rounded"></div>
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                Tech Partner
+              </span>
             </div>
-            <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center">
-              <span className="text-white text-xl font-bold">BYBIT</span>
+            <div className="group relative">
+              <div className="w-20 h-20 bg-[#00979D] rounded-full flex items-center justify-center">
+                <span className="text-white text-3xl font-bold">∞</span>
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs font-anaheim text-white opacity-0 transition-opacity group-hover:opacity-100">
+                Arduino
+              </span>
             </div>
           </div>
         </div>
