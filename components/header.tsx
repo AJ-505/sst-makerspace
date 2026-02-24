@@ -10,8 +10,8 @@ type NavLinks = {
 const navLinks: NavLinks[] = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events" },
-  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
 ];
 
 function NavLinkList() {

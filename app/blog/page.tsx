@@ -31,11 +31,11 @@ export default function BlogPage() {
                 <h1 className="font-urbanist mb-4 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
                   Ideas That
                   <br />
-                  <span className="text-[#7C3AED]">Build Futures</span>
+                  <span className="text-white">Build Futures</span>
                 </h1>
                 <p className="font-poppins max-w-xl text-base leading-relaxed text-gray-400">
                   Articles, research papers, and case studies from the people of
-                  SST Makerspace -- documenting the journey of innovation in
+                  SST Makerspace — documenting the journey of innovation in
                   Nigerian engineering.
                 </p>
               </div>
@@ -44,7 +44,7 @@ export default function BlogPage() {
               <div className="w-full md:w-auto">
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-2 md:gap-8">
                   <div className="text-center md:text-right">
-                    <div className="font-urbanist text-4xl font-bold text-[#7C3AED]">
+                    <div className="font-urbanist text-4xl font-bold text-white">
                       6+
                     </div>
                     <div className="font-anaheim text-xs text-gray-500">
@@ -113,7 +113,7 @@ export default function BlogPage() {
 
       {/* CTA: Contribute */}
       <section className="relative bg-gray-50 px-4 py-20 sm:px-8">
-        {/* Decorative side accents -- matching homepage CTA pattern */}
+        {/* Decorative side accents — matching homepage CTA pattern */}
         <div className="absolute top-0 left-0 h-full w-10 sm:w-32">
           <svg viewBox="0 0 100 400" className="h-full w-full">
             <path d="M 0 200 Q 50 100 100 200 Q 50 300 0 400" fill="#7C3AED" />
@@ -134,7 +134,7 @@ export default function BlogPage() {
           </h2>
           <p className="font-poppins mx-auto mb-8 max-w-2xl text-center text-gray-600">
             Whether it&apos;s a research paper, a project write-up, or an
-            opinion on the future of hardware in Africa -- we want to hear from
+            opinion on the future of hardware in Africa — we want to hear from
             you. SST Makerspace is your platform.
           </p>
           <div className="flex justify-center">

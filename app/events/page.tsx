@@ -12,10 +12,12 @@ export default function EventsPage() {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative px-8 py-32 text-white">
+        <section className="relative px-4 pt-8 pb-20 text-white sm:px-6 sm:pt-10 sm:pb-24 lg:px-8 lg:pt-12 lg:pb-28">
           <div className="relative mx-auto max-w-7xl">
-            <div className="font-anaheim mb-8 inline-block rounded bg-[#D97706] px-6 py-2 font-bold text-white">
-              EVENTS
+            <div className="mb-4 flex justify-start sm:mb-6">
+              <div className="font-anaheim inline-block rounded bg-[#D97706] px-6 py-2 font-bold text-white">
+                EVENTS
+              </div>
             </div>
 
             <h1 className="font-urbanist mb-6 text-center text-6xl font-bold md:text-7xl">

@@ -35,7 +35,7 @@ export function FeaturedPostCard({ post }: { post: BlogPost }) {
     <article className="group relative overflow-hidden rounded-3xl bg-black">
       <div className="grid md:grid-cols-2">
         {/* Image side */}
-        <div className="relative h-72 md:h-auto md:min-h-[480px]">
+        <div className="relative h-72 overflow-hidden md:h-auto md:min-h-[480px]">
           <Image
             src={post.coverImage}
             alt={post.title}
@@ -46,7 +46,7 @@ export function FeaturedPostCard({ post }: { post: BlogPost }) {
           <div className="absolute inset-0 hidden bg-gradient-to-r from-transparent to-black/60 md:block" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent md:hidden" />
 
-          {/* Large index number overlay -- editorial style from the inspiration */}
+          {/* Large index number overlay — editorial style from the inspiration */}
           <div className="font-urbanist absolute top-6 left-6 text-8xl leading-none font-bold text-white/10 select-none">
             01
           </div>
@@ -139,7 +139,7 @@ export function BlogPostCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
-        {/* Index number -- editorial style */}
+        {/* Index number — editorial style */}
         <div className="font-urbanist absolute right-4 bottom-3 text-5xl leading-none font-bold text-white/20 select-none">
           {String(index + 1).padStart(2, "0")}
         </div>
