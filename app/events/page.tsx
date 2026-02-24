@@ -180,8 +180,8 @@ export default function EventsPage() {
             Want to join our team?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-center font-poppins text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ex vel faucibus iaculis. Proin
-            viverra facilisis vehicula. Duis mattis turpis sem, nec porta.
+            We are always looking for students and collaborators who want to build, test, and ship impactful hardware
+            projects. Join the team to contribute your skills and learn by doing.
           </p>
           <div className="flex justify-center">
             <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] h-auto px-6 py-4 text-base font-urbanist font-bold text-white sm:px-8 sm:py-6 sm:text-lg">

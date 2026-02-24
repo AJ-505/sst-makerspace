@@ -84,10 +84,9 @@ export default function AboutPage() {
                 Here lies an illustrative quote by the person on the left.
               </h3>
               <p className="text-gray-600 font-poppins mb-6 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ex vel faucibus iaculis. Proin
-                viverra facilisis vehicula. Duis mattis turpis sem, nec porta nisl tristique id. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Nunc at varius dolor, a sollicitudin diam. Proin vehicula feugiat
-                semper.
+                SST Makerspace gives students a real environment to move from ideas to working prototypes. The
+                challenge structure builds technical confidence, teamwork, and communication skills that extend far
+                beyond the competition day.
               </p>
               <p className="font-poppins text-gray-800 font-semibold">Dr John Doe</p>
               <p className="font-anaheim text-gray-500">VIP</p>
@@ -233,8 +232,8 @@ export default function AboutPage() {
                   Here lies an illustrative quote by the person on the left.
                 </h3>
                 <p className="text-gray-600 font-poppins mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ex vel faucibus iaculis. Proin
-                  viverra facilisis vehicula. Duis mattis turpis sem, nec porta nisl tristique id.
+                  The event proved that student-led teams can deliver practical hardware solutions when given strong
+                  mentorship, clear goals, and room to experiment.
                 </p>
                 <div className="text-9xl text-[#7C3AED] absolute -bottom-8 right-0 opacity-20 font-urbanist">&quot;</div>
               </div>
@@ -322,8 +321,8 @@ export default function AboutPage() {
             Interested in being a sponsor?
           </h2>
           <p className="text-gray-600 font-poppins text-center mb-8 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ex vel faucibus iaculis. Proin
-            viverra facilisis vehicula. Duis mattis turpis sem, nec porta.
+            Partner with SST Makerspace to support student innovators building practical solutions for real industry
+            problems. Your sponsorship helps fund materials, mentorship, and competition prizes.
           </p>
           <div className="flex justify-center">
             <Button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-6 font-urbanist font-bold text-lg">
